@@ -24,4 +24,4 @@ def create_s3_bucket(bucket_name, region='us-east-1'):
 
 if __name__ == "__main__":
 
-    create_s3_bucket = 'de-elca-capstone-gp'
+    bucket_name = 'de-elca-capstone-gp'
