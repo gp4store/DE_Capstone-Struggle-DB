@@ -3,6 +3,10 @@ API
 Python Script
 
 1.  Create or deploy an Aurora Serverless service with a Pyscript       ✅
+    Notes:
+    -   Make data api enable                                            ❌
+    -   Make it public accesible                                        ❌
+    -   loading bar while its created cluster or instance               ❌
 2.  Check SQL scripts on struggle_db.sql work                           ✅
 2.  Connect or load data thru SQL client to Aurora Serverless           ✅
     2.1     Load data thru an API
