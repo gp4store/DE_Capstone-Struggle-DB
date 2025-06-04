@@ -10,7 +10,7 @@ Python Script
 2.  Check SQL scripts on struggle_db.sql work                           ✅
 2.  Connect or load data thru SQL client to Aurora Serverless           ✅
     2.1     Load data thru an API
-    2.2     Load data thru Pyscript
+    2.2     Load data thru Pyscript                                     OK
 3.  Transform data using AWS glue configure from Pyscript
     3.1 Decide what data transformations are we going to have
 4.  AWS glue job dumping data to S3 

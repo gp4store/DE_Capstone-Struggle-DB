@@ -14,14 +14,14 @@ def create_aurora_serverless_v2(cluster_name, username='admin'):
             DBClusterIdentifier=cluster_name,
             Engine='aurora-mysql',
             EnableHttpEndpoint= True, #Added this line on 05292025 to enable RDS data api
-            PubliclyAccessible=True, #Added this line on 05292025 to enable Public Access
+           
             MasterUsername=username,
             ManageMasterUserPassword=True,  # RDS manages the password
             MasterUserSecretKmsKeyId='alias/aws/secretsmanager',
             EngineMode='provisioned',  # Serverless v2 uses provisioned mode
             ServerlessV2ScalingConfiguration={
                 'MinCapacity': 0.5,  # Minimum ACUs (can go lower than v1)
-                'MaxCapacity': 4.0   # Maximum ACUs
+                'MaxCapacity': 1.0   # Maximum ACUs
             },
             BackupRetentionPeriod=7
         )
@@ -41,7 +41,7 @@ def create_aurora_serverless_v2(cluster_name, username='admin'):
             DBClusterIdentifier=cluster_name,
             DBInstanceClass='db.serverless',  # Serverless v2 instance class
             Engine='aurora-mysql',
-            PubliclyAccessible=False
+            PubliclyAccessible=True #Added this line on 06022025 to enable public access
         )
         
         print("Waiting for DB instance to be ready...")

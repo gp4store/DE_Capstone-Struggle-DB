@@ -1,36 +1,37 @@
 CREATE DATABASE struggle_db;
 
 
+CREATE DATABASE struggle_db;
+
 CREATE TABLE customers (
-	customer_id INT PRIMARY KEY,
+	customer_id INT AUTO_INCREMENT PRIMARY KEY,
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
-	email VARCHAR(50),
-	phone NUMERIC,
+	email VARCHAR(100),
+	phone VARCHAR(50),			
 	registration_date DATE,
 	loyalty_points NUMERIC
 );
 
-
-
 CREATE TABLE product (
-	product_id INT PRIMARY KEY,
+	product_id INT AUTO_INCREMENT PRIMARY KEY,
 	product_name VARCHAR(50),
-	product_description VARCHAR(50),
+	product_description VARCHAR(200),
 	brand VARCHAR(50),
-	price INT,
+	size_item VARCHAR(50),
+	price DECIMAL(10,2),
 	stock_quantity INT
 );
 
 CREATE TABLE sales_transaction (
-	transaction_id INT PRIMARY KEY,
     customer_id INT,
     product_id INT, 
-    transaction_date DATETIME,
-    total_spent INT,
-	discounts INT,
+	quantity INT,
+    total_amount DECIMAL(10,2),
+	order_status VARCHAR(15),
+	order_date TIMESTAMP,
+	shipping_address VARCHAR(200),
 	employee_name VARCHAR(50),
-	payment_method VARCHAR(50),
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     FOREIGN KEY (product_id) REFERENCES product(product_id)
 );
