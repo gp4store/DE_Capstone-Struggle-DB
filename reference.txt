@@ -5,3 +5,5 @@ https://erd.dbdesigner.net/
 https://aws.amazon.com/blogs/database/using-the-data-api-to-interact-with-an-amazon-aurora-serverless-mysql-database/
 
 https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rds/client/modify_db_instance.html
+
+https://www.databricks.com/glossary/medallion-architecture

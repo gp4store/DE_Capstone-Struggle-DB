@@ -63,3 +63,40 @@ queried directly with Athena.
 
 AWS Glue is specifically designed as a managed ETL service, so you're using it exactly as intended. 
 The SQL client → Aurora → Glue → S3 flow is a textbook example of a cloud-native ETL pipeline.
+
+---------------------------- 06052025 ------------------------------------------------------------------------------------
+
+This is an Extended ETL pipeline with multi-stage processing - specifically a Data Lake Analytics Pipeline with Query-Based ETL.
+Pipeline Classification:
+Hybrid ETL/ELT Pattern: You have both ETL (Glue transformations) and ELT (Athena queries on already-loaded data) components.
+Multi-Hop Architecture: Data flows through multiple S3 locations, with each stage serving different purposes.
+Detailed Flow:
+
+Extract: Raw data from S3 (Bronze layer)
+Transform: Glue processes and cleans data
+
+Crawler discovers schemas → Data Catalog
+Glue jobs perform transformations
+
+
+Load: Processed data to S3 (Silver layer)
+Analyze: Athena queries the processed data
+Load Again: Query results to S3 (Gold layer)
+
+This Creates a Medallion Architecture:
+Bronze Layer (S3 #1): Raw, unprocessed data
+Silver Layer (S3 #2): Cleaned, transformed data from Glue
+Gold Layer (S3 #3): Aggregated, business-ready data from Athena queries
+Key Characteristics:
+Data Lineage: Clear progression from raw → processed → analytical datasets
+Separation of Concerns: Glue handles complex ETL, Athena handles analytical transformations
+Reusability: Silver layer can be queried for different analytical purposes
+Scalability: Each stage can be optimized independently
+Common Use Cases:
+
+Silver Layer: Standardized, clean data for multiple analytics teams
+Gold Layer: Specific business metrics, KPIs, or reports
+Incremental Processing: Only reprocess what's needed at each stage
+
+This pattern is excellent for organizations that need both robust data processing (Glue) and flexible analytical 
+capabilities (Athena), with clear data quality progression through each layer.
