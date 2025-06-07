@@ -1,68 +1,26 @@
-SQL Client     →  Aurora Serverless → AWS Glue → S3
-API
-Python Script
+Raw Data (S3) → Glue Crawler → Data Catalog
+                     ↓
+               Glue ETL Jobs (heavy transformations)
+                     ↓
+Processed Data (S3) → Athena (analytical queries & light transforms)
+                     ↓
+Final Results (S3) → BI Tools/Reports
 
-1.  Create or deploy an Aurora Serverless service with a Pyscript       ✅
-    Notes:
-    -   Make data api enable                                            OK
-    -   Make it public accesible                                        OK
-    -   loading bar while its created cluster or instance               ❌
-2.  Check SQL scripts on struggle_db.sql work                           ✅
-2.  Connect or load data thru SQL client to Aurora Serverless           ✅
-    2.1     Load data thru an API
-    2.2     Load data thru Pyscript                                     OK
-3.  Transform data using AWS glue configure from Pyscript
-    3.1 Decide what data transformations are we going to have
-4.  AWS glue job dumping data to S3 
-5.  Bucket creation thru Pyscript
+SCOPE OF WORK:
 
-
-SQL Client to Aurora Serverless: Your SQL client connects to Aurora Serverless using standard 
-database connections (MySQL or PostgreSQL protocols). Aurora Serverless automatically scales based on demand.
-Aurora Serverless to AWS Glue: Glue can connect to Aurora Serverless as a data source using:
-
-JDBC connections for Aurora MySQL or PostgreSQL
-Glue crawlers to automatically discover schema
-Glue ETL jobs to extract and transform data
-
-
-AWS Glue to S3: Glue writes processed data to S3 in various formats (Parquet, JSON, CSV, etc.)
-
-Key considerations:
-
-Networking: Ensure proper VPC configuration and security groups allow Glue to access Aurora Serverless
-IAM permissions: Glue needs appropriate roles to read from Aurora and write to S3
-Connection pooling: Aurora Serverless can pause when inactive, so configure appropriate timeouts
-Data formats: Consider using columnar formats like Parquet for better performance in S3
-Partitioning: Structure your S3 data with partitions for efficient querying later
-
-this is absolutely considered an ETL (Extract, Transform, Load) pipeline! Here's how each 
-component maps to the ETL process:
-
-Extract:
-AWS Glue extracts data from Aurora Serverless (your source database)
-
-Transform:
-AWS Glue performs transformations on the data (cleaning, filtering, aggregating, format conversion, etc.)
-
-Load:
-AWS Glue loads the processed data into S3 (your destination/data lake)
-
-This is a classic modern ETL pattern commonly used in cloud data architectures. Some additional details:
-
-ETL vs ELT: This is traditional ETL since you're transforming before loading into S3. If you loaded raw 
-data to S3 first and then transformed it (using tools like Athena, Spark, or Redshift Spectrum), that would be ELT.
-Batch vs Streaming: This setup typically handles batch ETL, though you could make it near real-time using:
-
-Aurora change data capture (CDC)
-AWS DMS for continuous replication
-Glue streaming jobs
-
-Data warehouse pattern: Your S3 becomes a data lake that can feed into data warehouses like Redshift, or be 
-queried directly with Athena.
-
-AWS Glue is specifically designed as a managed ETL service, so you're using it exactly as intended. 
-The SQL client → Aurora → Glue → S3 flow is a textbook example of a cloud-native ETL pipeline.
+1.  Flow chart with AWS services logos
+2.  Buckets creation throgh a python Script
+    -   Raw data bucket and process data bucket
+3.  Insert null data to csvs to make it more real
+    -   Easiest method thru a python script
+4.  Upload .csv files to raw data bucket from console no need to use script
+    - For general information how apps upload raw data files to an AWS bucket
+5.  Set up an IAM role for glue and athena permissions
+6.  Set up glue crawler through a python script
+7.  Consume the data catalog using an aws glue etl jobs
+8.  Set up a glue etl job thru script
+9.  Target clean data bucket from glue etl job
+10. Wrap everything on a jupyter notebook
 
 ---------------------------- 06052025 ------------------------------------------------------------------------------------
 
