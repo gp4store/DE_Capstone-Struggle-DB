@@ -1,0 +1,101 @@
+"customer_id","product_id","quantity","total_amount","order_status","order_date","shipping_address","employee_name"
+72,87,5,84.29,cancelled,"2025-06-02 12:09:32","349 Daniel Rapids Apt. 592, Davischester, VI 94734",Robert Rivera
+87,55,5,335.93,delivered,"2025-06-02 12:08:36","048 Thompson Hills, Angelicafurt, PR 06122",Michael Terrell
+66,75,5,107.96,processing,"2025-06-02 12:05:41","713 Scott Divide, Lake Alexanderside, IL 48645",Alexander Allen
+92,93,2,401.76,cancelled,"2025-06-02 12:04:20","USNV Lara, FPO AA 16508",Jerry White
+74,78,2,368.03,pending,"2025-06-02 12:04:15","020 Sanchez Mill, Vanceville, GA 26295",Robert Smith
+54,60,1,47.78,shipped,"2025-06-02 12:08:43","203 Stacy Parkways, Matthewshaven, SD 32459",Christina Mccann
+86,97,4,475.02,delivered,"2025-06-02 12:07:26","70009 Krystal Stravenue Suite 542, South Adamview, CA 74956",Kathryn Austin
+94,85,3,183.48,delivered,"2025-06-02 12:05:41","13221 Jaime Tunnel Apt. 548, West Wendymouth, AS 97643",Michelle Vaughn
+96,75,1,184.58,processing,"2025-06-02 12:08:35","84848 Wade Courts Suite 865, North Christopherland, RI 72372",Paul Austin
+69,55,2,232.55,delivered,"2025-06-02 12:05:05","095 Thomas Viaduct, Peterstad, NM 31159",Lisa Dyer
+65,87,4,450.13,shipped,"2025-06-02 12:09:40","34953 Renee Run Suite 655, North Melissaland, IL 51502",Stephanie Jensen
+100,82,4,161.31,shipped,"2025-06-02 12:05:36","6972 Douglas Lodge Apt. 344, Jacksonton, CA 13435",Danny Morris
+82,74,5,483.92,delivered,"2025-06-02 12:07:20","557 Jenkins Roads Apt. 066, Andrewtown, AZ 19986",Mark Woodard
+64,98,1,309.40,delivered,"2025-06-02 12:06:08","78105 Thomas Island, Lake Michael, CO 64035",Daniel Robinson
+77,92,3,412.95,shipped,"2025-06-02 12:07:37","8829 Mejia Brooks, Ericton, NV 91910",Trevor Parks
+80,87,4,23.01,processing,"2025-06-02 12:05:15","474 Ryan Motorway, Lake Cristinaside, AL 38634",Mary Martin
+54,62,3,231.47,shipped,"2025-06-02 12:04:56","4808 Nelson Unions Suite 696, Maryberg, HI 93509",Allison Anthony
+74,87,5,95.23,pending,"2025-06-02 12:09:36","727 Wolf Station Apt. 762, Birdfurt, GA 91553",Steven Miller
+66,70,1,144.50,pending,"2025-06-02 12:06:03","04553 Carrie Ridge Suite 282, New Frances, AK 31663",Kathryn Oconnor
+95,67,4,149.11,delivered,"2025-06-02 12:07:38","59923 Gabrielle Springs, South Juliestad, MA 97480",Benjamin Mcdonald
+60,69,3,310.15,delivered,"2025-06-02 12:05:21","9226 Curtis Isle Apt. 586, Wadefurt, MN 18838",Darrell Wagner
+53,53,5,371.04,processing,"2025-06-02 12:09:27","295 James Greens Apt. 785, South Julia, ME 88275",David Lewis
+88,56,4,486.44,delivered,"2025-06-02 12:05:28","674 Adam Row Suite 146, East Ryan, SC 66165",Gregory Ho
+85,90,4,91.62,delivered,"2025-06-02 12:08:52","68556 Garcia Camp, East Thomasmouth, LA 23721",Joyce Mills
+65,76,3,180.20,delivered,"2025-06-02 12:07:49","54968 Kenneth Mountain Suite 067, Conwaytown, WI 31671",Amber Brown
+53,75,1,491.65,processing,"2025-06-02 12:04:47","8908 Linda Fields, South Mollyside, FM 97663",Kenneth Davila
+51,54,4,35.52,delivered,"2025-06-02 12:05:41","1803 Robert Lakes, East Rebeccafort, MS 01175",Rodney Johnson
+57,80,3,137.97,delivered,"2025-06-02 12:08:31","7386 Sandoval Loaf Apt. 122, South Raymondmouth, NE 26888",Brittany Charles
+60,75,5,50.44,shipped,"2025-06-02 12:03:54","Unit 2808 Box 1164, DPO AE 40556",Amber Le
+94,85,3,412.74,shipped,"2025-06-02 12:06:14","955 Martin Highway, Jessicabury, FL 28665",Ricky Cervantes
+55,96,5,13.37,cancelled,"2025-06-02 12:09:28","280 Vanessa Streets Apt. 128, Jesseburgh, TN 40606",Christie Perez
+68,99,4,124.30,processing,"2025-06-02 12:07:01","PSC 4742, Box 6635, APO AE 24091",Samantha Crosby
+56,62,1,214.39,shipped,"2025-06-02 12:09:12","453 Patricia Crossing Suite 035, Pachecoborough, MT 60376",Michael Edwards
+59,53,3,400.46,cancelled,"2025-06-02 12:07:41","86482 Gill Mission Apt. 552, Nelsonchester, OK 73567",David Lambert
+76,71,3,372.06,shipped,"2025-06-02 12:07:17","60026 Miranda Mission, Melissatown, CA 91026",Kenneth Barnes
+95,86,2,130.11,delivered,"2025-06-02 12:09:08","519 Cox Lock Suite 552, Lauraville, MN 30941",Teresa Edwards
+56,87,3,164.50,pending,"2025-06-02 12:07:38","42697 Johnson Mission Apt. 993, Lake Christopher, IL 71831",Carla Arias
+53,87,1,180.99,delivered,"2025-06-02 12:09:17","PSC 5670, Box 7194, APO AE 34232",Christina Anderson
+70,68,5,435.78,pending,"2025-06-02 12:09:46","76741 Bryant Bypass Suite 660, Daltonshire, MP 42145",Nicole Willis
+66,67,3,191.55,shipped,"2025-06-02 12:05:04","91886 William Branch Apt. 888, East Johnny, IL 06567",Ian King
+92,85,2,386.15,shipped,"2025-06-02 12:03:51","96996 Hernandez Meadows, East Michellemouth, KY 12558",Alison Marsh
+77,90,1,360.42,shipped,"2025-06-02 12:07:57","Unit 7687 Box 5923, DPO AE 74013",Mary Parker
+71,83,5,71.72,pending,"2025-06-02 12:06:18","956 Glen Row Suite 238, Medinatown, MO 97320",Brittany Fitzpatrick
+91,72,2,117.62,shipped,"2025-06-02 12:05:41","49386 Robert Turnpike Suite 203, Port Jacqueline, WA 16035",Joel Griffin
+84,86,5,223.67,pending,"2025-06-02 12:07:56","583 Linda Canyon Apt. 473, Saramouth, GU 09771",Stephen Wright
+81,58,5,422.93,cancelled,"2025-06-02 12:05:59","56326 Austin Isle Suite 831, South Susanmouth, NJ 77635",Kimberly Kelley
+57,67,5,346.31,delivered,"2025-06-02 12:07:13","64238 Hall Lodge Apt. 858, North Juliehaven, OR 42982",Christopher Mcmillan
+80,99,3,292.88,shipped,"2025-06-02 12:05:11","8669 Jose Extensions Suite 576, Annemouth, RI 56758",Sheena Williams
+75,79,4,495.61,cancelled,"2025-06-02 12:04:45","USS Cole, FPO AA 25758",Nathan Christensen
+68,54,5,343.51,shipped,"2025-06-02 12:09:44","1727 Lynch Causeway, South Brittany, AR 94582",Rachael Bell
+64,67,1,188.97,cancelled,"2025-06-02 12:06:14","4248 Erika Cove Apt. 473, Riosstad, NJ 31466",Daniel Bell
+81,70,3,169.33,delivered,"2025-06-02 12:08:08","3891 Castillo Extension Suite 765, Port Elizabethhaven, MH 17280",Steven Campbell
+66,98,5,14.14,pending,"2025-06-02 12:05:05","77480 Ricardo Locks, Wangstad, MI 43446",Anna Holmes
+92,60,5,141.89,cancelled,"2025-06-02 12:08:24","8263 Boyle Mission Suite 032, West Dawn, NC 31256",Billy Cooley
+70,90,2,296.95,delivered,"2025-06-02 12:07:02","838 Diana Lodge Suite 790, East Daniel, KY 81632",Christopher Howell
+80,94,2,10.90,processing,"2025-06-02 12:04:16","4712 James Stravenue Apt. 176, West Mauricefort, NC 82845",Mark Garza
+84,69,3,321.41,shipped,"2025-06-02 12:05:51","408 Jacob Estates, Lake Davidville, NH 46945",Shannon Roberts
+52,86,3,19.17,processing,"2025-06-02 12:07:17","USS Cunningham, FPO AA 31154",Scott Willis
+57,96,3,403.68,delivered,"2025-06-02 12:04:31","761 Munoz Hills Suite 691, Bellmouth, ND 49345",Charles Meyer
+54,72,4,498.42,processing,"2025-06-02 12:09:47","8707 Brown Plains Apt. 164, Patriciashire, OK 83188",Derek Rodriguez
+73,77,1,102.48,processing,"2025-06-02 12:06:31","7973 Newton Cape Suite 654, South Zacharyhaven, TN 49393",Alexandra Bailey
+72,54,5,451.20,delivered,"2025-06-02 12:06:37","908 Coffey Coves Apt. 215, Port Rodney, WA 04381",Travis Flores
+74,53,4,252.82,pending,"2025-06-02 12:08:59","4184 Scott Coves Suite 630, Dominiquestad, HI 05126",Sandra Walton
+77,60,3,119.56,shipped,"2025-06-02 12:08:24","78514 Steven Meadows, North Mistyfurt, AL 41698",Sara Wheeler
+72,84,2,96.06,delivered,"2025-06-02 12:04:13","7389 Lewis Road Suite 624, Davidbury, DC 89544",Catherine Oneal
+82,72,4,207.74,delivered,"2025-06-02 12:06:25","922 John River Suite 526, Lake Joshua, NC 67168",Katherine Hancock
+55,94,1,428.25,cancelled,"2025-06-02 12:05:54","1231 Mario Greens, Lake Kyleborough, DE 96196",Morgan Lowery
+78,93,4,98.48,delivered,"2025-06-02 12:09:36","126 Wall Burgs Apt. 252, Morrisville, IN 30701",Colin Holmes
+97,57,4,28.86,processing,"2025-06-02 12:03:50","9832 Peters Lake, Jeffreyton, DE 06497",Andrew Morton
+63,80,3,483.78,pending,"2025-06-02 12:09:40","37273 Christina Locks, Ramirezshire, SC 10783",Eric Pace
+66,79,4,377.47,delivered,"2025-06-02 12:07:23","528 Aaron Walks Apt. 801, South Ginaberg, WY 81449",Catherine Morris
+74,60,1,44.66,delivered,"2025-06-02 12:05:34","4533 Cole Isle Suite 418, West Leslie, OH 67024",Mary Cardenas
+74,61,2,377.46,processing,"2025-06-02 12:05:27","USCGC Long, FPO AA 84546",Anne Huang
+71,62,2,176.13,processing,"2025-06-02 12:07:58","625 Melissa Fork Apt. 550, Silvaland, GA 01596",Randall Hoffman
+63,70,3,473.45,processing,"2025-06-02 12:08:42","5465 Evans Well, Schneiderport, PW 72925",Timothy Jackson
+81,70,3,311.18,shipped,"2025-06-02 12:05:16","5438 Sims Rapid Apt. 548, Port Allisonmouth, OR 63736",Jeffrey Jones
+63,61,3,396.06,pending,"2025-06-02 12:03:56","268 Rogers Causeway Suite 010, New Ralphside, HI 63553",Patricia Jenkins
+68,77,1,438.35,delivered,"2025-06-02 12:09:29","392 Contreras Terrace, Port Arthur, OR 67253",Jared Boyd
+57,99,5,57.66,cancelled,"2025-06-02 12:05:49","USS Adams, FPO AE 87776",Richard Johnson
+74,74,1,479.14,cancelled,"2025-06-02 12:04:37","PSC 8374, Box 9237, APO AA 05118",Dominique Jensen
+81,84,1,278.37,processing,"2025-06-02 12:05:13","22670 Robinson Cliff Suite 328, Anthonyborough, VT 92303",Raymond Wilson
+83,77,5,244.43,shipped,"2025-06-02 12:04:24","3422 Lawrence Hills Suite 565, Kathleenstad, IN 28485",Emily Matthews
+53,76,5,226.62,processing,"2025-06-02 12:04:04","821 Wood Vista, Josephshire, AR 93962",Christina Anderson
+84,56,4,439.52,cancelled,"2025-06-02 12:06:03","USS Berger, FPO AP 17002",Brian Davis
+64,76,1,497.89,cancelled,"2025-06-02 12:07:26","9653 Brianna Radial, East Valeriestad, VA 88300",Meghan Whitaker
+65,93,2,162.77,shipped,"2025-06-02 12:06:13","3057 Brooke Divide, Lynnmouth, WI 82730",Holly Hamilton
+51,72,1,32.59,delivered,"2025-06-02 12:08:49","PSC 8452, Box 7514, APO AP 93031",Jessica Smith
+81,52,4,383.87,pending,"2025-06-02 12:06:34","0371 April Keys Suite 490, West Courtney, NC 06299",Riley Alvarado
+98,79,4,401.06,shipped,"2025-06-02 12:04:15","1810 Alan Islands Suite 013, South Davidfurt, WY 61730",Lisa Gibbs
+62,51,3,386.58,pending,"2025-06-02 12:06:43","390 Christopher Locks Suite 703, Villarrealtown, OH 71489",Adam Williams
+61,92,2,460.86,shipped,"2025-06-02 12:08:04","3503 Santiago Glen, Kylechester, MA 65352",Elizabeth Melendez
+76,84,1,409.30,cancelled,"2025-06-02 12:09:42","908 Williams Forge, Russellfurt, MP 09403",Angela Warner
+83,80,2,397.64,processing,"2025-06-02 12:08:18","434 Robinson Bridge, Williamsborough, AR 65056",Tina Dalton
+84,97,5,34.12,shipped,"2025-06-02 12:05:46","465 Henderson Mall, Hernandezburgh, GA 89679",Ivan Patterson
+83,57,1,281.38,pending,"2025-06-02 12:07:10","53491 Johnson Dam, Mossmouth, NV 37386",Stephanie Duarte
+63,94,1,307.55,delivered,"2025-06-02 12:03:56","921 Tate Knoll Suite 453, South Shawn, VA 34785",Steven Murray
+92,77,1,432.02,shipped,"2025-06-02 12:05:57","097 Daniels Mews Suite 211, Rachelton, TN 40678",Kelly Little
+96,72,5,424.92,pending,"2025-06-02 12:09:08","00598 Howard Pine, Dyerfort, IN 28699",Douglas Guzman
+52,52,5,428.94,cancelled,"2025-06-02 12:07:26","411 White Ridges Apt. 412, Drakefort, LA 21734",Victoria Smith
+85,64,4,253.18,shipped,"2025-06-02 12:06:39","2767 Meyer Pine, Port Pedro, RI 73880",Joseph Horn

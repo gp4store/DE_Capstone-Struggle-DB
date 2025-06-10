@@ -8,15 +8,16 @@ Final Results (S3) → BI Tools/Reports
 
 SCOPE OF WORK:
 
-1.  Flow chart with AWS services logos
-2.  Buckets creation throgh a python Script
-    -   Raw data bucket and process data bucket
-3.  Insert null data to csvs to make it more real
-    -   Easiest method thru a python script
-4.  Upload .csv files to raw data bucket from console no need to use script
-    - For general information how apps upload raw data files to an AWS bucket
-5.  Set up an IAM role for glue and athena permissions
-6.  Set up glue crawler through a python script
+1.  Flow chart with AWS services logos                                                          OK
+2.  Buckets creation throgh a python Script                                                     OK                             
+    -   Raw data bucket and process data bucket                                                 OK
+3.  Insert null data to csvs to make it more real                                               OK
+    -   Easiest method thru a python script                                                     OK
+4.  Upload .csv files to raw data bucket from console no need to use script                     OK
+    - For general information how apps upload raw data files to an AWS bucket                   PENDING
+5.  Set up an IAM role for glue and athena permissions                                          OK
+6.  Create AWS glue database from python script                                                 OK
+6.  Set up glue crawler through a python script                                                 OK
 7.  Consume the data catalog using an aws glue etl jobs
 8.  Set up a glue etl job thru script
 9.  Target clean data bucket from glue etl job

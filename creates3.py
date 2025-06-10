@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # Configure logging
     logging.basicConfig(level=logging.INFO)
     
-    bucket_name = 'de-elca-capstone-gp'
+    bucket_name = 'target-clean-data-app'
     region = 'us-west-1'  # Change to your preferred region
     
     if create_s3_bucket(bucket_name, region):
