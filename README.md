@@ -24,7 +24,7 @@ The Struggle database consists of three main tables with the following relations
 
 ## Architecture
 
-![AWS Architecture Flow](images/project_flow_chart.jpg)
+![AWS Architecture Flow](images/project%20flow%20chart.jpg)
 
 The pipeline follows this flow:
 ```
