@@ -35,9 +35,13 @@ S3 (Raw Data) → Glue Crawlers → Glue Data Catalog → Glue Jobs → S3 (Proc
 ├── scripts/
 │   ├── glue_jobs/             # Glue job Python scripts
 │   ├── crawlers/              # Crawler configuration
+│   ├── setup/                 # AWS infrastructure setup scripts
+│   │   ├── createdb.py        # Create Glue Data Catalog database
+│   │   └── creates3.py        # Create S3 buckets
 │   └── data_generation/       # Faker scripts for test data
-├── config/
-│   └── pipeline_config.py     # Configuration settings
+│       ├── aurora_cluster/    # Aurora cluster setup scripts
+│       │   └── struggle_db.sql # Database schema creation
+│       └── insert_data/       # Data insertion scripts
 └── README.md
 ```
 
@@ -68,8 +72,8 @@ aws configure
 
 ### 3. S3 Bucket Creation
 Create S3 buckets for:
-- Raw data storage: `s3://your-bucket-raw/`
-- Processed data storage: `s3://your-bucket-processed/`
+- Raw data storage: `s3://source-raw-data-app/`
+- Processed data storage: `s3://target-clean-data-app/`
 
 ### 4. Deploy Glue Resources
 - Upload Glue job scripts to S3
@@ -81,7 +85,7 @@ Create S3 buckets for:
 ### Data Generation
 Generate sample data using the Faker-based scripts:
 ```python
-python scripts/data_generation/generate_struggle_data.py
+python scripts/data_generation/inser_data.py
 ```
 
 ### Running the Pipeline
@@ -132,11 +136,11 @@ transaction_id,customer_id,product_id,quantity,transaction_date,total_amount
 
 ## Configuration
 
-Key configuration parameters in `config/pipeline_config.py`:
-- S3 bucket paths
-- Glue job settings
-- Data transformation rules
-- Logging levels
+Configuration parameters are set directly in the individual scripts:
+- S3 bucket names in `setup/creates3.py`
+- Glue database name in `setup/createdb.py`
+- AWS region settings across scripts
+- Logging levels configured per script
 
 ## Performance Notes
 

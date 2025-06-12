@@ -1,4 +1,4 @@
-CREATE DATABASE struggle_db;
+
 
 
 CREATE DATABASE struggle_db;
