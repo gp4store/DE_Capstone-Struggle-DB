@@ -11,10 +11,24 @@ This project implements an end-to-end ETL pipeline that processes three main dat
 
 The pipeline uses AWS Glue for serverless data processing and S3 for durable data storage, automatically discovering schemas and transforming raw CSV data into analytics-ready formats.
 
+## Database Schema
+
+The Struggle database consists of three main tables with the following relationships:
+
+![Struggle DB Schema](images/struggle_db_erd.png)
+
+### Tables
+- **Customers**: Customer information with loyalty points tracking
+- **Products**: Product catalog with inventory management
+- **Sales Transactions**: Order history linking customers and products
+
 ## Architecture
 
+![AWS Architecture Flow](images/project%20flow%20chart.jpg)
+
+The pipeline follows this flow:
 ```
-S3 (Raw Data) → Glue Crawlers → Glue Data Catalog → Glue Jobs → S3 (Processed Data)
+S3 (Raw Data) → Glue Crawlers → Glue Data Catalog → Glue Jobs → S3 (Processed Data) → Athena → QuickSight
 ```
 
 ### Components
@@ -22,6 +36,8 @@ S3 (Raw Data) → Glue Crawlers → Glue Data Catalog → Glue Jobs → S3 (Proc
 - **AWS Glue Crawlers**: Automated schema discovery and cataloging
 - **AWS Glue Jobs**: Data transformation and processing (PySpark)
 - **AWS Glue Data Catalog**: Centralized metadata repository
+- **Amazon Athena**: SQL queries on processed data
+- **Amazon QuickSight**: Business intelligence and visualization
 
 ## Repository Structure
 
@@ -72,8 +88,8 @@ aws configure
 
 ### 3. S3 Bucket Creation
 Create S3 buckets for:
-- Raw data storage: `s3://source-raw-data-app/`
-- Processed data storage: `s3://target-clean-data-app/`
+- Raw data storage: `s3://your-bucket-raw/`
+- Processed data storage: `s3://your-bucket-processed/`
 
 ### 4. Deploy Glue Resources
 - Upload Glue job scripts to S3
@@ -85,7 +101,7 @@ Create S3 buckets for:
 ### Data Generation
 Generate sample data using the Faker-based scripts:
 ```python
-python scripts/data_generation/inser_data.py
+python scripts/data_generation/generate_struggle_data.py
 ```
 
 ### Running the Pipeline
