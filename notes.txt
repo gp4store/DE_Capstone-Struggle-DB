@@ -8,6 +8,7 @@ Final Results (S3) → BI Tools/Reports
 
 SCOPE OF WORK:
 
+0.  Create ERD diagram                                                                          PENDING
 1.  Flow chart with AWS services logos                                                          OK
 2.  Buckets creation throgh a python Script                                                     OK                             
     -   Raw data bucket and process data bucket                                                 OK
@@ -18,10 +19,10 @@ SCOPE OF WORK:
 5.  Set up an IAM role for glue and athena permissions                                          OK
 6.  Create AWS glue database from python script                                                 OK
 6.  Set up glue crawler through a python script                                                 OK
-7.  Consume the data catalog using an aws glue etl jobs
-8.  Set up a glue etl job thru script
-9.  Target clean data bucket from glue etl job
-10. Wrap everything on a jupyter notebook
+7.  Consume the data catalog using an aws glue etl jobs                                         OK
+8.  Set up a glue etl job thru script                                                           OK
+9.  Target clean data bucket from glue etl job                                                  OK
+10. Wrap everything on a jupyter notebook   
 
 ---------------------------- 06052025 ------------------------------------------------------------------------------------
 
