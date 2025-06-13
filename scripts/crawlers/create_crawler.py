@@ -12,10 +12,10 @@ def create_glue_crawler():
     glue_client = boto3.client('glue')
     
     # Crawler configuration
-    crawler_name = 'sales_transaction_crawler'
-    s3_path = 's3://source-raw-data-app/sales_transactions'  # Replace with your S3 path
-    database_name = 'struggle_db'  # Replace with your database name
-    iam_role = 'arn:aws:iam::248189910447:role/struggle-db-glue-permissions'  # Replace with your IAM role
+    crawler_name = 'your-crawler-name'
+    s3_path = 'your-s3-path' 
+    database_name = 'your-database-name'  
+    iam_role = 'your-iam-role-name'
     
     try:
         response = glue_client.create_crawler(

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import boto3
 
@@ -14,7 +13,6 @@ def create_aurora_serverless_v2(cluster_name, username='admin'):
             DBClusterIdentifier=cluster_name,
             Engine='aurora-mysql',
             EnableHttpEndpoint= True, #Added this line on 05292025 to enable RDS data api
-           
             MasterUsername=username,
             ManageMasterUserPassword=True,  # RDS manages the password
             MasterUserSecretKmsKeyId='alias/aws/secretsmanager',
@@ -68,4 +66,4 @@ def create_aurora_serverless_v2(cluster_name, username='admin'):
 
 # Usage
 if __name__ == "__main__":
-    create_aurora_serverless_v2("final-de-elca-struggle-db")
+    create_aurora_serverless_v2("your-aurora-cluster-name")

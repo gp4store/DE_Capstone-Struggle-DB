@@ -4,16 +4,11 @@ from faker import Faker
 from datetime import datetime
 import random
 
-# Initialize Faker
 fake = Faker()
-
-# Initialize the RDS Data API client
 rds_client = boto3.client('rds-data', region_name='us-west-1')
-
-# Your Aurora Serverless cluster details
-cluster_arn = 'arn:aws:rds:us-west-1:248189910447:cluster:final-de-elca-struggle-db'
-secret_arn = 'arn:aws:secretsmanager:us-west-1:248189910447:secret:rds!cluster-74dc466a-2809-40d2-95b0-9d37e1f14e1f-gdVOBk'
-database_name = 'struggle_db'
+cluster_arn = 'your-aurora-cluster-arn'
+secret_arn = 'your-aws-secret-arn'
+database_name = 'your-database-name'
 
 def format_parameter(key, value):
     """Convert Python value to RDS Data API parameter format"""
@@ -91,7 +86,7 @@ def get_existing_ids(table_name, id_column):
 def clear_tables():
     """Clear all tables in proper order (respecting foreign keys)"""
     print("Clearing existing data...")
-    execute_query("DELETE FROM sales_transaction")  # Child table first
+    execute_query("DELETE FROM sales_transaction")
     execute_query("DELETE FROM product") 
     execute_query("DELETE FROM customers")
     print("Tables cleared.")
@@ -99,7 +94,6 @@ def clear_tables():
 def generate_user_data():
     """Generate fake user data - without customer_id (let DB auto-increment)"""
     return {
-        # Don't include customer_id - let database auto-increment
         'first_name': fake.first_name(),
         'last_name': fake.last_name(),
         'email': fake.email(),
@@ -118,7 +112,7 @@ def generate_product_data():
              "Workout Hoodie", "Running Shoes", "Sports Bra", "Track Pants", "Football Helmet", "Baseball Cap", "Golf Polo Shirt", 
              "Cycling Shorts", "Swimming Goggles", "Yoga Mat", "Wrestling Singlet", "Boxing Gloves", "Ski Jacket", "Snowboard Pants"]  
     return {
-        # Don't include product_id - let database auto-increment
+ 
         'product_name': random.choice(style),
         'product_description': random.choice(items) ,
         'brand': random.choice(brands),
@@ -151,7 +145,6 @@ def insert_fake_orders(count=30, batch_size=25):
     """Insert fake orders with proper relationships"""
     print(f"Generating {count} fake orders...")
     
-    # Get existing user and product IDs
     user_ids = get_existing_ids('customers', 'customer_id')
     product_ids = get_existing_ids('product', 'product_id')
     
@@ -166,11 +159,11 @@ def insert_fake_orders(count=30, batch_size=25):
     print(f"Found {len(user_ids)} users and {len(product_ids)} products")
     
     if count <= batch_size:
-        # Single batch
+
         orders = [generate_order_data(user_ids, product_ids) for _ in range(count)]
         return insert_batch_records('sales_transaction', orders)
     else:
-        # Multiple batches
+
         for i in range(0, count, batch_size):
             batch_count = min(batch_size, count - i)
             orders = [generate_order_data(user_ids, product_ids) for _ in range(batch_count)]

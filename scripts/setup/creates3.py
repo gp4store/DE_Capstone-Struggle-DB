@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 import boto3
 import logging
 from botocore.exceptions import ClientError
@@ -15,10 +15,10 @@ def create_s3_bucket(bucket_name, region='us-west-1'):
         s3_client = boto3.client('s3', region_name=region)
         
         if region == 'us-east-1':
-            # us-east-1 is the default region and doesn't need LocationConstraint
+           
             s3_client.create_bucket(Bucket=bucket_name)
         else:
-            # All other regions require LocationConstraint
+           
             location = {'LocationConstraint': region}
             s3_client.create_bucket(
                 Bucket=bucket_name, 
@@ -33,7 +33,7 @@ def create_s3_bucket(bucket_name, region='us-west-1'):
             logging.error(f"Bucket '{bucket_name}' already exists")
         elif error_code == 'BucketAlreadyOwnedByYou':
             logging.warning(f"Bucket '{bucket_name}' already owned by you")
-            return True  # This isn't really an error
+            return True
         else:
             logging.error(f"Error creating bucket: {e}")
         return False
@@ -41,11 +41,11 @@ def create_s3_bucket(bucket_name, region='us-west-1'):
     return True
 
 if __name__ == "__main__":
-    # Configure logging
+   
     logging.basicConfig(level=logging.INFO)
     
-    bucket_name = 'target-clean-data-app'
-    region = 'us-west-1'  # Change to your preferred region
+    bucket_name = 'your-bucket-processed'
+    region = 'us-west-1'
     
     if create_s3_bucket(bucket_name, region):
         print(f"Successfully created bucket: {bucket_name}")
