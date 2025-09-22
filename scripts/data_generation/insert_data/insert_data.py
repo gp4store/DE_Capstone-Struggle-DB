@@ -174,16 +174,16 @@ def generate_related_data_in_memory(num_users=50, num_products=50, num_orders=10
     """Generate all related data in memory before inserting"""
     print("Generating related data in memory...")
     
-    # Clear existing data first (optional)
+    # Clear existing data first
     clear_tables()
     
-    # Generate users - without customer_id (let DB auto-increment)
+    # Generate users - without customer_id
     users = []
     for i in range(num_users):
         user_data = generate_user_data()
         users.append(user_data)
     
-    # Generate products - without product_id (let DB auto-increment)
+    # Generate products - without product_id
     products = []
     for i in range(num_products):
         product_data = generate_product_data()

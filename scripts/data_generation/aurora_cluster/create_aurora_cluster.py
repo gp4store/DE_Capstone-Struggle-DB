@@ -51,17 +51,17 @@ def create_aurora_serverless_v2(cluster_name, username='admin'):
         # Get cluster info
         cluster = rds.describe_db_clusters(DBClusterIdentifier=cluster_name)['DBClusters'][0]
         
-        print(f"✅ Aurora Serverless v2 cluster created!")
+        print(f"Aurora Serverless v2 cluster created!")
         print(f"Cluster ID: {cluster['DBClusterIdentifier']}")
         print(f"Endpoint: {cluster['Endpoint']}")
         print(f"Reader Endpoint: {cluster.get('ReaderEndpoint', 'N/A')}")
         print(f"Port: {cluster['Port']}")
-        print("\n💡 Find your database password in AWS Secrets Manager console")
+        print("\nFind your database password in AWS Secrets Manager console")
         
         return cluster
         
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
         return None
 
 # Usage
